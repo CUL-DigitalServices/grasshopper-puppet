@@ -1,0 +1,7 @@
+branches:
+  only:
+    - master
+
+before_install:
+
+  - echo 'Initial commit'
