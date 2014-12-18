@@ -1,0 +1,6 @@
+[submodule "modules/vcsrepo"]
+    path = modules/vcsrepo
+    url = https://github.com/puppetlabs/puppetlabs-vcsrepo
+[submodule "modules/apache"]
+    path = modules/apache
+    url = https://github.com/puppetlabs/puppetlabs-apache.git

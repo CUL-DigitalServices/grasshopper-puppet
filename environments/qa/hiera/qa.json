@@ -1,0 +1,9 @@
+{
+    "classes": [
+        "::localconfig::ordering",
+        "::ghservice::apache"
+        "::ghservice::postgres"
+        "::ghservice::grasshopper",
+        "::ghservice::ui"
+    ]
+}
