@@ -1,15 +1,5 @@
 #!/usr/bin/env bash
 
-# Do a basic check to see if we have a good environment to start from
-# Check if the oracle-java binary is present
-ORACLE_JDK_INSTALLER="jdk-7u65-linux-x64.gz"
-if [ ! -f /opt/grasshopper_puppet/modules/oracle-java/files/$ORACLE_JDK_INSTALLER ] ; then
-    echo "The Oracle JDK installer is not present in the correct location."
-    echo "Please download $ORACLE_JDK_INSTALLER from the Oracle website and place it at:"
-    echo "modules/oracle-java/files/$ORACLE_JDK_INSTALLER"
-    exit 1
-fi
-
 # Include the Puppet APT repository
 echo "Fetching Puppet"
 cd /tmp
