@@ -1,5 +1,5 @@
 class ghservice::apache (
-    $enable_basic_auth = "false" 
+    $enable_basic_auth = "false"
     ) {
 
     if $enable_basic_auth == 'true' {
@@ -7,7 +7,7 @@ class ghservice::apache (
       package { 'apache2-utils': }
     }
 
-    class { '::apache': 
+    class { '::apache':
         default_vhost => false,
     }
 
@@ -83,5 +83,4 @@ class ghservice::apache (
         access_log      => false,
         custom_fragment => template('ghservice/apache/app_admin.conf.erb'),
     }
-
 }

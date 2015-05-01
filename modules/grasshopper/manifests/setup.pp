@@ -27,7 +27,6 @@ class grasshopper::setup (
 
   }
 
-
   # if file for import exists and server is responding, stop the server
   exec { 'temporarily-stop-grasshopper-for-import':
       onlyif  => "test -f /tmp/timetabledata.json && curl --fail ${admin_test_url}",
@@ -59,5 +58,4 @@ class grasshopper::setup (
       command => "node ${app_root_dir}/etc/scripts/data/timetable-import.js --file /tmp/timetabledata.json --app 1 && mv -i /tmp/timetabledata.json /opt/timetabledata.json.imported",
       timeout => 36000,
   }
-
 }

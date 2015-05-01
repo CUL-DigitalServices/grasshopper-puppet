@@ -86,6 +86,4 @@ class grasshopper (
     provider => 'upstart',
     require  => [ File['/etc/init/grasshopper.conf', "${app_root_dir}/config.js"] , Class['ghservice::postgresql'] ]
   }
-
-
 }

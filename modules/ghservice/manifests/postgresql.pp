@@ -11,6 +11,7 @@ class ghservice::postgresql (
         user     => "$user",
         password => postgresql_password("$user", "$password"),
     } ->
+
     exec { 'enable pg_trgm':
         command => "sudo -u postgres psql grasshopper -c 'CREATE EXTENSION IF NOT EXISTS pg_trgm'"
     }
