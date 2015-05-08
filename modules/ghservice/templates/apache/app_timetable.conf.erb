@@ -38,6 +38,21 @@
     # App files
     Alias /apps <%= @path_apps %>
 
+    # App user management
+    Alias /admin/users <%= path_timetable_admin %>/app
+
+    # App management
+    Alias /admin/app <%= path_timetable_admin %>/app
+
+    # App configuration management
+    Alias /admin/configuration <%= path_timetable_admin %>/app
+
+    <Directory <%= path_timetable_admin %>/app>
+        Options Indexes FollowSymLinks
+        Order Allow,Deny
+        Allow from All
+    </Directory>
+
     # Tenant Admin
     Alias /admin <%= @path_timetable_admin %>
 
