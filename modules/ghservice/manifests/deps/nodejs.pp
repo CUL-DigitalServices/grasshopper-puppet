@@ -17,5 +17,4 @@ class ghservice::deps::nodejs (
     anchor { 'nodejs_begin': } ->
     Class ['::nodejs'] ->
     anchor { 'nodejs_end': }
-
 }

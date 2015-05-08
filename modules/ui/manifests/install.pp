@@ -1,1 +1,1 @@
-class ui::install { }
+class ui::install {}
