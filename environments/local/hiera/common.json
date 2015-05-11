@@ -36,6 +36,9 @@
         "127.0.0.2"
     ],
 
+    /* Whether or not to do a production build */
+    "do_production_build": "true",
+
     /* Grasshopper repository */
     "app_ui_path": "/opt/grasshopper-ui",
     "app_install_method": "vagrant",

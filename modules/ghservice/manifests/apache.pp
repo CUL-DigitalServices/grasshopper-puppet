@@ -20,12 +20,18 @@ class ghservice::apache (
 
     $path_ui_root = hiera('ui_root_dir')
 
-    $path_shared            = "${path_ui_root}/shared"
-    $path_docs              = "${path_ui_root}/docs"
-    $path_apps              = "${path_ui_root}/apps"
-    $path_admin_docroot     = "${path_ui_root}/apps/admin/ui"
-    $path_timetable_docroot = "${path_ui_root}/apps/timetable/ui"
-    $path_timetable_admin   = "${path_ui_root}/apps/timetable/admin"
+    $path_optimized = hiera('do_production_build') ? {
+        'true'  => '/target/optimized/',
+        'false' => '/',
+        default => '/',
+    }
+
+    $path_shared            = "${path_ui_root}${path_optimized}shared"
+    $path_docs              = "${path_ui_root}${path_optimized}docs"
+    $path_apps              = "${path_ui_root}${path_optimized}apps"
+    $path_admin_docroot     = "${path_ui_root}${path_optimized}apps/admin/ui"
+    $path_timetable_docroot = "${path_ui_root}${path_optimized}apps/timetable/ui"
+    $path_timetable_admin   = "${path_ui_root}${path_optimized}apps/timetable/admin"
 
     $apache_dir_require = $enable_basic_auth ? {
         'true'  => 'valid-user',
