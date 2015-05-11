@@ -36,6 +36,9 @@
         "127.0.0.2"
     ],
 
+    /* Whether or not to do a production build */
+    "do_production_build": "true",
+
     "grasshopper::setup::tenant_appdisplayname_escaped": "My+Timetable+-+Beta",
 
     /* Grasshopper repository */
