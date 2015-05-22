@@ -29,6 +29,12 @@
     # General Directives
     # ----------------------------------------------------------------------
 
+    # No script
+    Alias /noscript <%= @path_shared %>/gh/errors/noscript.html
+
+    # Unsupported browser
+    Alias /unsupported <%= @path_shared %>/gh/errors/unsupported.html
+
     # Shared files
     Alias /shared <%= @path_shared %>
 
