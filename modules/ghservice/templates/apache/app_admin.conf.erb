@@ -53,6 +53,12 @@
     # Users
     Alias /users <%= @path_admin_docroot %>
 
+    # Cache everything under /apps, /shared, /favicon, etc..
+    <LocationMatch "^/(apps|shared|favicon|android|apple|mstile)">
+        ExpiresActive On
+        ExpiresDefault "access plus 1 year"
+    </LocationMatch>
+
     # QUnit tests
     Alias /qunit /opt/grasshopper-ui/tests/qunit
     <Directory /opt/grasshopper-ui/tests/qunit>
