@@ -11,6 +11,7 @@ class ghservice::apache (
         default_vhost => false,
     }
 
+    class { '::apache::mod::expires': }
     class { '::apache::mod::headers': }
     class { '::apache::mod::proxy': }
     class { '::apache::mod::proxy_http': }
