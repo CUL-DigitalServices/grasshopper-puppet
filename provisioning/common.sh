@@ -23,6 +23,9 @@ echo "Enable multiverse repositories"
 sed -i "/^# deb.*multiverse/ s/^# //" /etc/apt/sources.list
 # No need to "apt-get update" as puppetlabs-apt will do it for us
 
+# Install ruby-dev (compass)
+sudo apt-get install ruby-dev -y
+
 # Make sure all the submodules have been pulled down
 cd ${PUPPET_REPO_DIR}
 sh bin/pull.sh

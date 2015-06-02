@@ -25,6 +25,18 @@ class ui (
         command    => 'git submodule update --init --recursive'
     } ->
 
+    # Ensure Sass is installed
+    package { 'sass':
+        ensure => 'installed',
+        provider => 'gem'
+    } ->
+
+    # Ensure Compass is installed
+    package { 'compass':
+        ensure => 'installed',
+        provider => 'gem'
+    } ->
+
     # Do a production build, if it's enabled
     exec { 'do_production_build':
         cwd        => $ui_root_dir,
