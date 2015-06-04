@@ -37,7 +37,7 @@
     ],
 
     /* Whether or not to do a production build */
-    "do_production_build": "true",
+    "do_production_build": "false",
 
     /* Grasshopper repository */
     "app_ui_path": "/opt/grasshopper-ui",
