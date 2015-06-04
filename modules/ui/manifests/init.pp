@@ -10,8 +10,8 @@ class ui (
     # Create a command for generating the production build
     $production_build_cmd = hiera('do_production_build') ? {
         'true'  => 'npm install -d && node ./node_modules/.bin/grunt',
-        'false' => './etc/scripts/compileCSS.sh',
-        default => 'true',
+        'false' => 'npm install -d && node ./node_modules/.bin/grunt exec:compileCSS',
+        default => 'true'
     }
 
     class { "::ui::install::${install_method}":

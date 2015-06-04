@@ -67,5 +67,4 @@
     /* Apache directives */
     "ghservice::apache::version": "",
     "ghservice::apache::enable_basic_auth": "true"
-
 }
