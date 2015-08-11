@@ -1,12 +1,7 @@
-class ghservice::deps::nodejs (
-    $nodejs_version = "0.10.35-1nodesource1~trusty"
-    ) {
+class ghservice::deps::nodejs () {
 
     # Apply the nodejs class which will configure the apt repo and install nodejs
-    class { '::nodejs':
-        version => $nodejs_version,
-        manage_repo => true
-    }
+    class { '::nodejs': }
 
     # This next section is necessary to ensure the above class is actually
     # contained within the surrounding class because by default puppet will let

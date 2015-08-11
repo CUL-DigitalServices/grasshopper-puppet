@@ -39,14 +39,14 @@
     /* Whether or not to do a production build */
     "do_production_build": "true",
 
-    "grasshopper::setup::tenant_appdisplayname_escaped": "My+Timetable+-+Beta",
+    "grasshopper::setup::tenant_appdisplayname_escaped": "My+Timetable+-+QA",
 
     /* Grasshopper repository */
     "app_ui_path": "/opt/grasshopper-ui",
     "app_install_method": "git",
     "app_install_config": {
         "source": "https://github.com/CUL-DigitalServices/grasshopper.git",
-        "revision": "ccf099550f74dded246c2cee9cb91d1cc30e78d8"
+        "revision": "master"
     },
 
     /* Grasshopper UI repository */
@@ -54,11 +54,8 @@
     "ui_install_method": "git",
     "ui_install_config": {
         "source": "https://github.com/CUL-DigitalServices/grasshopper-ui.git",
-        "revision": "0fc9a17607d20a6b662ea3b25b7a7972f74a6538"
+        "revision": "master"
     },
-
-    /* Node.JS version */
-    "ghservice::deps::nodejs::nodejs_version": "0.10.38-1chl1~trusty1",
 
     /* PostgreSQL settings */
     "ghservice::postgresql::version": "",
